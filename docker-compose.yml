@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DATABASE_PASSWORD}
+      - MYSQL_DATABASE=${DATABASE_NAME}
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data:/mysql_data
+volumes:
+  mysql_data:
